@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
+  --color-navy: #1B1F5E;
+  --color-navy-dark: #10133A;
+  --color-navy-light: #2D3580;
+  --color-teal: #00B8D4;
+  --color-teal-light: #00D4EC;
+  --color-teal-muted: #E0F7FB;
+  --color-surface: #F7F9FF;
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  color: #1B1F5E;
+  background: #F0F4F8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Texto gradiente navy → teal */
+.text-gradient {
+  background: linear-gradient(135deg, #1B1F5E 0%, #00B8D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Linha decorativa teal */
+.teal-line::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #00B8D4, #1B1F5E);
+  border-radius: 2px;
+  margin-bottom: 1rem;
 }
