@@ -1,30 +1,30 @@
 const partners = [
   {
     name: "Bruno Alves",
-    role: "Contador · Diretor Financeiro",
+    role: "Sócio-Contador",
     bio: "Especialista em planejamento tributário e consultoria empresarial. Informações serão atualizadas em breve.",
-    crc: "CRC/CE 028478/O-3",
     Image: "/images/bruno-bg.jpg",
     thumb: "/images/bruno-thumb.jpg",
-    initials: "",
+    initials: "S1",
+    
   },
   {
     name: "Cristiany de Brito",
-    role: "Contadora",
+    role: "Sócia-Contadora",
     bio: "Especialista em departamento fiscal. Informações serão atualizadas em breve.",
-    crc: "CRC/CE 030151/O-0",
     Image: "/images/cris-bg.jpg",
     thumb: "/images/cris-thumb.jpg",
     initials: "S2",
+    
   },
   {
     name: "José Maurício",
-    role: "Sócio-Fundador · Contador",
+    role: "Sócio-Contador",
     bio: "Especialista em contabilidade gerencial e análise financeira. Informações serão atualizadas em breve.",
-    crc: "CRC/CE 026938/O-6",
     Image: "/images/mauricio-bg.jpg",
     thumb: "/images/mauricio-thumb.jpg",
     initials: "S3",
+    
   },
 ];
 
@@ -97,7 +97,7 @@ export default function Partners() {
                 <p className="text-gray-400 text-sm leading-relaxed mb-5">{p.bio}</p>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#00B8D4]" />
-                  <span className="text-xs text-gray-400 font-mono">{p.crc}</span>
+                  
                 </div>
               </div>
             </div>
