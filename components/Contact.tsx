@@ -37,8 +37,10 @@ export default function Contact() {
       body: JSON.stringify(form),
     });
 
+    const data = await response.json();
+
     if (!response.ok) {
-      throw new Error("Erro ao enviar");
+      throw new Error(data.error || "Erro ao enviar");
     }
 
     alert("Mensagem enviada com sucesso!");
@@ -52,7 +54,7 @@ export default function Contact() {
 
   } catch (error) {
     console.error(error);
-    alert("Erro ao enviar mensagem.");
+    alert("Erro: " + (error instanceof Error ? error.message : "Erro desconhecido"));
   }
 };
 
