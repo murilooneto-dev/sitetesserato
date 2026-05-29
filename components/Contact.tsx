@@ -37,10 +37,11 @@ export default function Contact() {
       body: JSON.stringify(form),
     });
 
-    const data = await response.json();
+    const text = await response.text();
+    const data = text ? JSON.parse(text) : {};
 
     if (!response.ok) {
-      throw new Error(data.error || "Erro ao enviar");
+      throw new Error(data.error || `Erro HTTP ${response.status}`);
     }
 
     alert("Mensagem enviada com sucesso!");
